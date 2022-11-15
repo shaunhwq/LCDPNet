@@ -78,10 +78,12 @@ class ImagesDataset(torch.utils.data.Dataset):
 
         # load input images:
         self.input_list = load_from_glob_list(input_globs)
+        self.input_list.sort()
 
         # load GT images:
         if self.have_gt:
-            self.gt_list = load_from_glob_list(gt_globs)
+            self.gt_list = load_from_glob_list(gt_globs) * 5
+            self.gt_list.sort()
             try:
                 assert len(self.input_list) == len(self.gt_list)
             except:

@@ -13,7 +13,6 @@ def get_psnr_ssim(img1_path, img2_path):
     return psnr, ssim
 
 
-
 if __name__ == "__main__":
     input_path1 = "checkpoints/test_result/lcdpnet_checkpoints_trained_on_ours.ckpt@ours-cslab.test"
     input_images = [os.path.join(input_path1, img) for img in os.listdir(input_path1)]

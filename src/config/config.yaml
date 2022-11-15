@@ -4,7 +4,7 @@ comment: false
 debug: false
 val_debug_step_nums: 2    # sanity check num
 gpu: -1                   # number of gpus to use (int) or which GPUs to use (list or str)
-backend: ddp              # gpu accelerator. value: ddp or none
+backend: cuda              # gpu accelerator. value: ddp or none
 runtime_precision: 16
 amp_backend: native       # native or apex
 amp_level: O1
